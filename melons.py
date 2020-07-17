@@ -56,3 +56,22 @@ class InternationalMelonOrder(AbstractMelonOrder):
             return total + 3
 
         return total
+
+class GovernmentMelonOrder(AbstractMelonOrder):
+
+    passed_inspection = False
+
+    def __init__(self, species, qty):
+
+        super().__init__(species, qty)
+
+        self.tax = 0.0
+
+    def mark_inspection(self, passed):
+
+       self.passed_inspection = passed
+
+
+
+
+
